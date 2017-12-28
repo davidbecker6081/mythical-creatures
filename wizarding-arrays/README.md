@@ -22,6 +22,6 @@ Unskip one test at a time and concentrate on making that one test pass. Unskip t
 
 ### Make the tests pass in the following sequence:
 
-* test/spells-test.js
+* test/spell-test.js
 * test/robe-test.js
 * test/potions-test.js

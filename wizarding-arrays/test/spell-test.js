@@ -9,14 +9,14 @@ describe('Wizard spells', () => {
     assert.equal(spell.description, 'makes things levitate');
   });
 
-  it.skip('can be executed', () => {
+  it('can be executed', () => {
     var spell = new Spell('wingardium leviosa', 'makes things levitate');
     var target = "book";
 
     assert.equal(spell.execute(target), "Success! The book is levitating.");
   });
 
-  it.skip('can execute against multiple targets', () => {
+  it('can execute against multiple targets', () => {
     var spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     var target1 = "book";
@@ -28,7 +28,7 @@ describe('Wizard spells', () => {
     assert.equal(spell.execute(targets), "Success! The book is levitating. Success! The table is levitating. Success! The bowl is levitating.");
   });
 
-  it.skip('saves all its targets in execution history', () => {
+  it('saves all its targets in execution history', () => {
     var spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     var target1 = "book";
@@ -48,7 +48,7 @@ describe('Wizard spells', () => {
     assert.equal(spell.executionHistory[2], target3);
   });
 
-  it.skip('can clear its execution history', () => {
+  it('can clear its execution history', () => {
     var spell = new Spell('wingardium leviosa', 'makes things levitate');
 
     var target1 = "book";
