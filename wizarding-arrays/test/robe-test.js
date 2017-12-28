@@ -3,7 +3,7 @@ var Robe = require('../lib/robe');
 
 describe('A wizard\'s robe', () => {
 
-  it.skip('has a lot of pockets and initially all are empty', () => {
+  it('has a lot of pockets and initially all are empty', () => {
     var robe = new Robe();
 
     assert.equal(robe.pockets.length, 10);
@@ -13,7 +13,7 @@ describe('A wizard\'s robe', () => {
     }
   });
 
-  it.skip('can put things in the pockets', () => {
+  it('can put things in the pockets', () => {
     var robe = new Robe();
 
     robe.addToPocket('youth elixir potion');
@@ -21,7 +21,7 @@ describe('A wizard\'s robe', () => {
     assert.equal(robe.pockets[0][0], 'youth elixir potion');
   });
 
-  it.skip('can not have two things in one pocket', () => {
+  it('can not have two things in one pocket', () => {
     var robe = new Robe();
 
     robe.addToPocket('youth elixir potion');
@@ -31,7 +31,7 @@ describe('A wizard\'s robe', () => {
     assert.equal(robe.pockets[1][0], 'magic wand');
   });
 
-  it.skip('can fill up all the pockets', () => {
+  it('can fill up all the pockets', () => {
     var robe = new Robe();
 
     var cats = ['1 cat', '2 cat', '3 cat', '4 cat', '5 cat', '6 cat', '7 cat', '8 cat', '9 cat', '10 cat'];
@@ -43,11 +43,11 @@ describe('A wizard\'s robe', () => {
     }
 
     for (var i = 0; i < robe.pockets.length; i++) {
-      assert.equal(robe.pockets[0].length, 1);
+      assert.equal(robe.pockets[i].length, 1);
     }
   });
 
-  it.skip('can retrieve things from pockets by name', () => {
+  it('can retrieve things from pockets by name', () => {
     var robe = new Robe();
     robe.addToPocket('magic wand');
 
@@ -59,7 +59,7 @@ describe('A wizard\'s robe', () => {
     assert.deepEqual(robe.pockets[0], []);
   });
 
-  it.skip('can empty all pockets', () => {
+  it('can empty all pockets', () => {
     var robe = new Robe();
     var cats = ['1 cat', '2 cat', '3 cat', '4 cat', '5 cat', '6 cat', '7 cat', '8 cat', '9 cat', '10 cat'];
 
