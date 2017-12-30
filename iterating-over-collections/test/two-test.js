@@ -12,41 +12,40 @@ describe('IteratorFactory', function() {
 
   describe('when instantiated with a collection', function() {
 
-    it.skip('the prototype function sum is invoked with the collection', function() {
+    it('the prototype function sum is invoked with the collection', function() {
       var factory = new iteratorFactory([1, 2, 3, 4, 5]);
 
       assert.equal(factory.sum(), 15);
 
-      assert.equal(factory.sum([1, 2, 3]), 15);
+      assert.equal(factory.sum([1, 2, 3, 4, 5]), 15);
     });
 
-    it.skip('the prototype function `sumAndSquare` is invoked with the collection', function() {
+    it('the prototype function `sumAndSquare` is invoked with the collection', function() {
       var factory = new iteratorFactory([1, 2, 3, 4, 5]);
 
-      assert.equal(factory.sum(), 225);
+      assert.equal(factory.sumAndSquare(), 225);
 
-      assert.equal(factory.sum([10, 20, 30, 40]), 225);
+      assert.equal(factory.sumAndSquare([1, 2, 3, 4, 5]), 225);
     });
 
-    it.skip('the prototype function `onlyEvens` is invoked with the collection', function() {
+    it('the prototype function `onlyEvens` is invoked with the collection', function() {
       var factory = new iteratorFactory([1, 2, 3, 4, 5, 6]);
 
-      assert.equal(factory.onlyEvens(), [2, 4, 6]);
-      assert.equal(factory.onlyEvens([20, 33, 55, 24]), [2, 4, 6]);
+      assert.deepEqual(factory.onlyEvens(), [2, 4, 6]);
+      assert.deepEqual(factory.onlyEvens([20, 33, 55, 24]), [20, 24]);
     });
 
-    it.skip('the prototype function `onlyOdds` is invoked with the collection', function() {
+    it('the prototype function `onlyOdds` is invoked with the collection', function() {
       var factory = new iteratorFactory([1, 2, 3, 4, 5, 6]);
 
-      assert.equal(factory.onlyEvens(), [1, 3, 5]);
-      assert.equal(factory.onlyEvens([20, 33, 55, 24]), [2, 4, 6]);
+      assert.deepEqual(factory.onlyOdds(), [1, 3, 5]);
+      assert.deepEqual(factory.onlyOdds([20, 33, 55, 24]), [33, 55]);
     });
 
-    it.skip('the prototype function `squareAndSum` is invoked with the collection', function() {
+    it('the prototype function `squareAndSum` is invoked with the collection', function() {
       var factory = new iteratorFactory([1, 2, 3, 4, 5, 6]);
 
       assert.equal(factory.squareAndSum(), 91);
-      assert.equal(factory.onlyEvens([20, 33, 55, 24]), 91);
     });
   });
 });
